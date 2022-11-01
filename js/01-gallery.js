@@ -5,7 +5,7 @@ const arrayOfPictures = galleryItems
   .map(
     ({ preview, original, description }) =>
       `<div class="gallery__item">
-    <a class="gallery__link" href="${original}" rel="nofollow">
+    <a class="gallery__link" href="${original}">
     <img
     class="gallery__image"
     src="${preview}"
