@@ -14,20 +14,7 @@ const arrayOfPictures = galleryItems
   .join('');
 gallery.innerHTML = arrayOfPictures;
 
-let instance;
-gallery.addEventListener('click', onClickPicture);
-gallery.addEventListener('keydown', onPressEsc);
-
-function onClickPicture(evt) {
-  evt.preventDefault();
-  instance = new SimpleLightbox('.gallery a', );
-  instance.show();
-  return instance;
-}
-
-function onPressEsc(evt) {
-  if (evt.key === 'Escape' || instance.visible()) {
-    instance.close();
-  }
-}
-console.log(galleryItems);
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: '250',
+});
